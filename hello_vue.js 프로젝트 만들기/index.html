@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue hello world</title>
+</head>
+<body>
+    <div id="app">{{ message }}</div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                message:'hello Vue.js! #app이 최상위 root이고 html태그에 {{ 속성 }}, vue 인스턴스에 정의된 data객체에는 {{속성}}에 들어간 네임을 똑같이 붙여주면 된다.'
+            }
+        });
+    </script>
+</body>
+</html>
