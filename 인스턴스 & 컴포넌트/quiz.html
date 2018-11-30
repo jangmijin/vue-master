@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>퀴즈</title>
+</head>
+<body>
+    <div id="app">
+        {{ message }}
+        <todo-footer></todo-footer>
+        <todo-list></todo-list>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script>
+        Vue.component('todo-footer',{
+            template:'<div>this is another global child component</div>'
+        });
+        var cmp = {
+            template: '<div>this is another local child component</div>'
+        }
+        var app = new Vue({
+            el:'#app',
+            data: {
+                message: 'this is a parent commponent'
+            },
+            components:{
+                'todo-list': cmp
+            }
+        });
+    </script>
+</body>
+</html>
